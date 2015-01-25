@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour {
 	public Text winText;
 	private int count;
 
+    public AudioClip setupTheme;
+    public AudioClip playTheme;
 
 	void Start()
 	{
@@ -43,4 +45,16 @@ public class PlayerController : MonoBehaviour {
 	{
 		countText.text = "count: "+count.ToString();
 	}
+
+    void playSetupTheme()
+    {
+        audio.clip = setupTheme;
+        audio.Play();
+    }
+
+    void playPlayTheme()
+    {
+        audio.clip = playTheme;
+        audio.Play();
+    }
 }
